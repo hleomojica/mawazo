@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Feed from "@components/Feed";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <p className="desc text-center">
         Mawazo wall is a platform where you can share your thoughts and ideas
       </p>
-      {/* Feed  */}
+      <Feed />
     </section>
   );
 }
