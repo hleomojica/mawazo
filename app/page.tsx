@@ -2,9 +2,19 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-    </div>
+    <section className="w-full flex-center flex-col">
+      <h1 className="head_text text-center">
+        {" "}
+        Discover & Share
+        <br className="max-md:hidden" />
+        <span className="orange_gradient">
+          Write your amazing thoughts and share with the world
+        </span>
+      </h1>
+      <p className="desc text-center">
+        Mawazo wall is a platform where you can share your thoughts and ideas
+      </p>
+      {/* Feed  */}
+    </section>
   );
 }
