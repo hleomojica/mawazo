@@ -5,6 +5,7 @@ Mawazo means "ideas" in Swahili.
 This project is a web application that allows users to create and share ideas or thoughts, creating a wall of shared texts. The idea is to create a space where people can share their thoughts and read the thoughts of others.
 
 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
