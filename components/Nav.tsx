@@ -8,7 +8,7 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 const Nav = () => {
   const isUserLoggedIn = true;
 
-  const [provider, setProvider] = useState<any>(null);
+  const [providers, setProvider] = useState<any>(null);
 
   useEffect(() => {
     const setProviders = async () => {
@@ -55,6 +55,36 @@ const Nav = () => {
                 className="rounded-full"
               ></Image>
             </Link>
+          </div>
+        ) : (
+          <>
+            {providers &&
+              Object.values(providers).map((provider: any) => (
+                <button
+                  type="button"
+                  key={provider.name}
+                  onClick={() => signIn(provider)}
+                  className="black_btn"
+                >
+                  Sign In
+                </button>
+              ))}
+          </>
+        )}
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="sm:hidden flex relative">
+        {isUserLoggedIn ? (
+          <div className="flex">
+            <Image
+              src="/images/logo.svg"
+              alt="Profile"
+              width={37}
+              height={37}
+              className="rounded-full"
+              onClick={() => {}}
+            ></Image>
           </div>
         ) : (
           <></>
