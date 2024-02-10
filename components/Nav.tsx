@@ -10,7 +10,6 @@ const Nav = () => {
 
   const [providers, setProvider] = useState<any>(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
-
   useEffect(() => {
     const setProviders = async () => {
       const response = await getProviders();
@@ -31,6 +30,7 @@ const Nav = () => {
         />
         <p className="logo_text"></p>
       </Link>
+
       {/* Desktop Navigation */}
       <div className="sm:flex hidden">
         {session?.user ? (
