@@ -10,8 +10,9 @@ export const connectToDb = async () => {
     return;
   }
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      dbName: process.env.MONGO_DB,
+    const mongoUri = process.env.MONGODB_URI || "";
+    await mongoose.connect(mongoUri, {
+      dbName: "mawazo",
     });
     isConnected = true;
     console.log("✔ MongoDB is connected");
