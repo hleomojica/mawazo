@@ -1,13 +1,23 @@
 "use strict";
 import React, { useState } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+
+import From from "@components/Form";
+import { PostType } from "@/types/FormTypes";
 
 const CreatePostPage = () => {
-  const [name, setName] = useState("");
+  const [submitting, setSubmittings] = useState<Boolean>(false);
+  const [post, setPost] = useState<PostType>({ prompt: "", tags: "" });
+
+  const createPost = async () => {};
   return (
-    <div>
-      <h1>Create Post</h1>
-      <p>Create post form here</p>
-      {/* <CreatePostForm /> */}
-    </div>
+    <From
+      type="create-post"
+      post={post}
+      setPost={setPost}
+      submitting={submitting}
+      handleSubmit={createPost}
+    />
   );
 };
